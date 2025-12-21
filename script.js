@@ -15,17 +15,16 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
 
     // --- Phần chọn ảnh (Giống hệt cũ) ---
     if (bmi < 18.5) {
-        message = "Hơi gầy nha, gió thổi bay đó! 🍃";
-        imageUrl = "https://cdn-icons-png.flaticon.com/512/3048/3048368.png";
+        message = " GAY quá đấy :))";
+        imageUrl = "/asset/img/anhGay.jpg";
     } else if (bmi >= 18.5 && bmi < 24.9) {
-        message = "Dáng chuẩn siêu mẫu, tuyệt vời! 😎";
-        imageUrl = "https://cdn-icons-png.flaticon.com/512/1754/1754726.png";
+
+        message = "Dáng ngon vc rồi :>> ";
+        imageUrl = "/asset/img/anhcandoi.jpg";
+
     } else if (bmi >= 25 && bmi < 29.9) {
-        message = "Hơi 'chúp pi' rồi nha, nhìn cưng nhưng bớt ăn lại! 🍔";
-        imageUrl = "https://cdn-icons-png.flaticon.com/512/5350/5350974.png";
-    } else {
-        message = "Báo động! Lăn nhanh hơn đi rồi đó! 🆘";
-        imageUrl = "https://cdn-icons-png.flaticon.com/512/3132/3132732.png";
+        message = " 'Chúp piiii' ";
+        imageUrl = "/asset/img/anhbeo.jpg";
     }
 
     // --- PHẦN MỚI: Tạo nội dung Popup ---
