@@ -1,0 +1,113 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    background-color: antiquewhite;
+    background-image: url(/asset/img/images.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+
+}
+.bmi-calculator {
+    background-color: plum;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+button {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+input[type="number"] {
+    width: calc(100% - 20px); /* Kích thước phù hợp với padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Sửa/Thêm vào file style.css */
+
+/* 1. Cái nền đen mờ phủ kín màn hình */
+.result-area {
+    position: fixed; /* Chốt cố định, không chạy lung tung */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen mờ (60%) */
+    display: none; /* Mặc định ẩn đi */
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+    z-index: 1000; /* Đảm bảo nó nằm đè lên trên cùng */
+}
+
+/* Khi có class 'show' thì đổi display thành flex để căn giữa hoạt động */
+.result-area.show {
+    display: flex; 
+}
+
+/* 2. Cái hộp nội dung màu trắng nằm giữa */
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 90%; /* Không bao giờ to quá màn hình điện thoại */
+    width: 400px;
+    position: relative; /* Để đặt nút đóng */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Đổ bóng cho đẹp */
+    animation: popIn 0.3s ease; /* Hiệu ứng nảy ra */
+}
+
+/* Hiệu ứng nảy nảy cho vui mắt */
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Nút đóng (Dấu X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: red;
+}
