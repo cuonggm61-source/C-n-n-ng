@@ -8,7 +8,7 @@ body {
     margin: 0;
     
     background-color: antiquewhite;
-    background-image: url( ./asset/img/images.jpg);
+    background-image: url(/asset/img/images.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
