@@ -16,15 +16,15 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
     // --- Phần chọn ảnh (Giống hệt cũ) ---
     if (bmi < 18.5) {
         message = " GAY quá đấy :))";
-        imageUrl = "/asset/img/anhGay.jpg";
+        imageUrl = "./asset/img/anhGay.jpg";
     } else if (bmi >= 18.5 && bmi < 24.9) {
 
         message = "Dáng ngon vc rồi :>> ";
-        imageUrl = "/asset/img/anhcandoi.jpg";
+        imageUrl = "./asset/img/anhcandoi.jpg";
 
     } else if (bmi >= 25 && bmi < 29.9) {
         message = " 'Chúp piiii' ";
-        imageUrl = "/asset/img/anhbeo.jpg";
+        imageUrl = "./asset/img/anhbeo.jpg";
     }
 
     // --- PHẦN MỚI: Tạo nội dung Popup ---
