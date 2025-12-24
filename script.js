@@ -4,6 +4,9 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
     let height = parseFloat(document.getElementById('height').value);
     let resultDiv = document.getElementById('result');
 
+    // let clickSound = new Audio('./asset/audio/Thầy Giáo Ba với điệu cười ám ảnh - Haunting smile - Tiếng cười - YouTube.mp3');
+    // clickSound.play();
+
     if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
         alert("Nhập số đàng hoàng đi bạn ơi! 😠");
         return;
@@ -12,19 +15,22 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
     let bmi = (weight / (height * height)).toFixed(2);
     let message = "";
     let imageUrl = "";
-
+    
     // --- Phần chọn ảnh (Giống hệt cũ) ---
     if (bmi < 18.5) {
         message = " GAY quá đấy :))";
         imageUrl = "./asset/img/anhGay.jpg";
+        new Audio('./asset/audio/Gay ay ay ay ay - Voice in Head - Gay Echo sound effect TikTok - Instagram Reels free Download link - YouTube.mp3').play();
     } else if (bmi >= 18.5 && bmi < 24.9) {
 
-        message = "Dáng ngon vc rồi :>> ";
+        message = "Dáng ngon vãi chương:>> ";
         imageUrl = "./asset/img/anhcandoi.jpg";
+        new Audio('./asset/audio/ối dồi ôi -- sound effects - YouTube.mp3').play();
 
-    } else if (bmi >= 25 && bmi < 29.9) {
-        message = " 'Chúp piiii' ";
+    } else if (bmi >= 25 ) {
+        message = " 'Chúp piiiii' ";
         imageUrl = "./asset/img/anhbeo.jpg";
+        new Audio('./asset/audio/Uii Uiiiii (HD) Sound effect - YouTube.mp3').play();
     }
 
     // --- PHẦN MỚI: Tạo nội dung Popup ---
